@@ -27,7 +27,9 @@ title: Ruby tutorial
   	As you can see, the variable x was first made an int, then later changed to a string. There is no type declaration at any point and was changed very easily! Ruby has classes that are similar to Java primative data types among other and more:
   </p>
   <table>
-  	<th> Java</th><th>Ruby</th>
+  	<tr>
+  		<th> Java</th><th>Ruby</th>
+  	</tr>
   	<tr>
   		<td> String</td><td>String</td>
   	</tr>
@@ -101,7 +103,7 @@ title: Ruby tutorial
   =>16
   </code>
   </pre>
-
+  <p class="writing">
   Ruby does not like frills and unnecessary writing, just like programmers! Ruby wants simple code, and only the bare minimum, as shown here.
   </p>
   <br />
@@ -109,6 +111,7 @@ title: Ruby tutorial
   <p class="sectionTitle">While Loops</p>
   <p class="writing">
   While loops are the same while loops you recognize from any other languages you have used. But as we all know, exact syntax is important with computers. The format of a while loop is actually somewhat flexible, as there are a couple different ways syntactically correct while loops can be written.
+
   <pre>
   <code class="ruby">
   while condition [do]
@@ -286,4 +289,84 @@ title: Ruby tutorial
   </pre>
   Now that you've seen it, it makes sense. Remember, no parentheses needed, no braces needed, nothing more than is necessary. 
   </p>
+
+  <p class="sectionTitle">Classes</p>
+  <p class="writing">
+  	The best way to talk about creating your own class in Ruby is to just give an example.  It is very easy, and Ruby provides shortcuts so it is even simpler!
+  </p>
+  <pre>
+  <code class="ruby">
+  	#class Cat
+
+  	class Cat
+  		def initialize #needed to create a new object of the class.
+  			@name = nil #@name and @color are instance variables!
+  			@color = "orange"
+  		end
+  		def setName(name)
+  			@name =name
+  		end
+  		def meow
+  			puts "meow"
+  		end
+  		def pur
+  			puts "puuur-puurr"
+  		end
+  	end  	
+
+
+  	kitten = Cat.new  #creates new cat
+  	kitten.setName("Mr. Jingles") # gives cat a name.
+  </code>
+  </pre>
+  <p class="writing">
+  	As you can see, it is fairly simple to make a class!  Classes generally start with an upper case letter.  The word "initialize" is used as a constructor to create a new object of that class. In the example above you see some functions that are declared using def and the name of the function (such as setNAme, meow and pur). With Ruby, the getter and setter methods(functions) can be much easier. Here is how to do it; you use attribute_accessors!
+  </p>
+  <pre>
+  <code class="ruby">
+  	attr_reader :color #this allows you to display the name
+  	attr_writer :name #this allows you to set the name, will replace setName in above example
+  	attr_accessor :name #this allows to do both!
+
+  	#replace
+  		def setName(name)
+  			@name =name
+  		end
+  	#attr_accessor :name to get....
+  	class Cat
+  		def initialize 
+  			@name = nil 
+  			@color = "orange"
+  		end
+  		def meow
+  			puts "meow"
+  		end
+  		def pur
+  			puts "puuur-puurr"
+  		end
+  		attr_accessor :name
+  	end  
+  	
+  	#now you can read and write with...
+  	kitten.name = "Mr. Jingles"
+  	kitten.name => "Mr.Jingles"
+  </code>
+  </pre>
+  <p class="writing">
+  	Use the attr_accessors, it shortens the code and helps readability! Another great feature about classes in Ruby is that they can <strong> ALWAYS</strong> be expanded upon! Say you want to add another method to the cat class:
+  </p>
+  <pre>
+  <code class="ruby">
+  	#All you need to do is the following...
+  	class Cat
+  		def scratch
+  			puts "HISS, SWIPE!"
+  		end
+  	end
+
+  	#Cat now has this method!
+  </code>
+  </pre>
+  <p class="writing">
+  	You can add on to existing Ruby classes as well! You are not limited to just user defined classes.  A draw back to Ruby is there is no method overloading.  There is no distinction between the number of arguements that are passed.
   </div><!-- .welcome -->
