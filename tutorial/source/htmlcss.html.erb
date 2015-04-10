@@ -8,36 +8,36 @@ title: HTML/CSS Tutorial
 <p class="rubyTitle">Welcome to the HTML/CSS Tutorial for CSE3901!</p>
 <p class="sectionTitle">Introduction</p>
 <p class="writing">
-	The purpose of this tutorial is to introduce you to HTML and CSS. We'll start with HTML. HTML is an acronym which stands for '<strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage'. What does this mean? Essentially, HTML is a language that web browsers read. HTML tells web browsers how to organize content. That's as simple as it gets! HTML is made up of <strong>&lttags&gt</strong>. We'll talk more about those later.
+	The purpose of this tutorial is to introduce you to HTML and CSS. We'll start with HTML. HTML is an acronym which stands for '<strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage'. What does this mean? Essentially, HTML is a language that web browsers read. HTML tells web browsers how to organize content. That's as simple as it gets! HTML is made up of <strong>&lt;tags&gt;</strong>. We'll talk more about those later.
 </p>
 <p class="writing">
 	We'll touch more on CSS after HTML, but a brief introduction is in order. As HTML grew more advanced, browsers were capable of doing more and more fancy tricks to make content look incredibly nice and, well, stylish. Eventually, it became cumbersome to both organize and style content in the same file. CSS was created to fix this problem. CSS is an acronym that stands for '<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets'. We'll worry about what that specifically means later. For now, just remember that HTML is used to oragnize content, and CSS is used to style content.
 </p>
 <p class="sectionTitle">Tags!</p>
 <p class="writing">
-	HTML is based on the usage of <strong>tags</strong>. What are tags? Tags are keywords that're written inside of angle brackets (&lt and &gt). Nearly all tags consist of both an opening part (<strong>&lttagname&gt</strong>) and a closing part (<strong>&lt/tagname&gt</strong>). Within these two parts, you can type in content in the format of plaintext. You can also nest tags within one another. The basic format of your document should look something like this:
+	HTML is based on the usage of <strong>tags</strong>. What are tags? Tags are keywords that're written inside of angle brackets (&lt; and &gt;). Nearly all tags consist of both an opening part (<strong>&lt;tagname&gt;</strong>) and a closing part (<strong>&lt;/tagname&gt;</strong>). Within these two parts, you can type in content in the format of plaintext. You can also nest tags within one another. The basic format of your document should look something like this:
 	<pre><code class="html">
-		&lttagname&gtcontent&lt/tagname&gt
+		&lt;tagname&gt;content&lt;/tagname&gt;
 	</code></pre>
 	Note that, when you render an HTML page in your browser, the tags do not show up. Instead, the content shows up. This is because tags are simply used to organize your content. The browser does the heavy lifting of making things look the way they should, and returns to you a pretty view of the content organized as it should be!
 	<br> <br>
 	There are tons of HTML tags. Below you can find a list of some common tags and what their basic functions are.
 	<ul>
-		<li><strong>&ltp&gt</strong> tag holds your text in a paragraph structure</li>
-		<li><strong>&lth1&gt</strong> creates a heading. This text will be bigger than your average paragraph's text.</li>
-		<li><strong>&lta&gt</strong> tag, or the "anchor" tag, can be used to link to a webpage.</li>
-		<li><strong>&lttable&gt</strong> tag creates the structure for a table</li>
-		<li><strong>&lttr&gt</strong> tag holds the content of a row of a table and should be written within the <strong>table</strong> tags.</li>
-		<li><strong>&lttd&gt</strong> tags hold specific values for specific table elements. These tags should be within <strong>&lttr&gt</strong> tags.</li>
-		<li><strong>&ltstrong&gt</strong> tag makes the text contained in the tag bold.</li>
+		<li><strong>&lt;p&gt;</strong> tag holds your text in a paragraph structure</li>
+		<li><strong>&lt;h1&gt;</strong> creates a heading. This text will be bigger than your average paragraph's text.</li>
+		<li><strong>&lt;a&gt;</strong> tag, or the "anchor" tag, can be used to link to a webpage.</li>
+		<li><strong>&lt;table&gt;</strong> tag creates the structure for a table</li>
+		<li><strong>&lt;tr&gt;</strong> tag holds the content of a row of a table and should be written within the <strong>table</strong> tags.</li>
+		<li><strong>&lt;td&gt;</strong> tags hold specific values for specific table elements. These tags should be within <strong>&lt;tr&gt;</strong> tags.</li>
+		<li><strong>&lt;strong&gt;</strong> tag makes the text contained in the tag bold.</li>
 	</ul>
 	If you're interested in seeing more about specific tags, or want a larger list of tags, checkout <a href="http://www.w3schools.com/tags/">this link</a>.
 	<br> <br>
 	I stated that <em>nearly all</em> tags consist of an opening and closing part. Some notable tags that don't consist of both of these parts are listed below:
 	<ul>
-		<li>The <strong>&ltbr&gt</strong> tag creates a line break in your text.</li>
-		<li>The <strong>&lthr&gt</strong> tag creates a horizontal line on your page.</li>
-		<li>The <strong>&ltimg&gt</strong> can show an image on your page.</li>
+		<li>The <strong>&lt;br&gt;</strong> tag creates a line break in your text.</li>
+		<li>The <strong>&lt;hr&gt;</strong> tag creates a horizontal line on your page.</li>
+		<li>The <strong>&lt;img&gt;</strong> can show an image on your page.</li>
 	</ul>
 	There are many more tags that don't require a closing tag, but the ones listed above are the most notable.
 	<br><br>
@@ -47,15 +47,15 @@ title: HTML/CSS Tutorial
 <p class="writing">
 	There are certain tags that nearly every HTML document will have. These tags are exemplified below in a sample HTML document:
 	<pre><code class="html">
-		&lt!DOCTYPE html&gt
-		&lthtml&gt
-			&lthead&gt
-				&lttitle&gt[Page Title Here]&lt/title&gt
-			&lt/head&gt
-			&ltbody&gt
+		&lt;!DOCTYPE html&gt;
+		&lt;html&gt;
+			&lt;head&gt;
+				&lt;title&gt;[Page Title Here]&lt;/title&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
 				[content here]
-			&lt/body&gt
-		&lt/html&gt
+			&lt;/body&gt;
+		&lt;/html&gt;
 	</code></pre>
 	Let's go over what each of these tags does.<br />
 	<ul>
@@ -70,38 +70,38 @@ title: HTML/CSS Tutorial
 <p class="writing">
 	Below, you can see the code for a very simple HTML page that uses the tags we've discussed so far:
 	<pre><code class="html">
-	&lt!DOCTYPE html&gt
-	&lthtml&gt
-		&lthead&gt
-			&lttitle&gtHello world!&lt/title&gt
-		&lt/head&gt
-		&ltbody&gt
-			&lth1&gtThis is a header!&lt/h1&gt
-			&ltp&gt
-				Hi there! This is a paragraph. I can add a &ltstrong&gtbr&lt/strong&gt tag to add a line break in my paragraph. Watch!
-				&ltbr&gt
-				There it was! Also, I can use the &ltstrong&gtstrong&lt/strong&gt tag to make certain words bold!
-				The horizontal line below is there thanks to a &ltstrong&gthr&lt/strong&gt tag.
-			&lt/p&gt
-			&lthr&gt
-			&ltp&gt
-				We're now in a new paragraph! &lta href="http://www.google.com/"&gtHere&lt/a&gt is a link to Google.com, created from an &ltstrong&gtanchor&lt/strong&gt tag.
-				Below, you can find an image that was added using the &ltstrong&gtimg&lt/strong&gt tag. 
-				Also, there is a table that was constructed using the &ltstrong&gttable&lt/strong&gt, &ltstrong&gttr&lt/strong&gt, and &ltstrong&gttd&lt/strong&gt tags.
-			&lt/p&gt
-			&ltimg src="http://i.imgur.com/fUkvDkw.png" alt="A bunny with a pancake on its head!"&gt
-			&lttable border="1px"&gt
-				&lttr&gt
-					&lttd&gtThis is the first element in the table!&lt/td&gt
-					&lttd&gtI'm still in the first row, but now in the second column!&lt/td&gt
-				&lt/tr&gt
-				&lttr&gt
-					&lttd&gtNow we're in the second row!&lt/td&gt
-					&lttd&gtStill in the second row!&lt/td&gt
-				&lt/tr&gt
-			&lt/table&gt
-		&lt/body&gt
-	&lt/html&gt
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;title&gt;Hello world!&lt;/title&gt;
+		&lt;/head&gt;
+		&lt;body&gt;
+			&lt;h1&gt;This is a header!&lt;/h1&gt;
+			&lt;p&gt;
+				Hi there! This is a paragraph. I can add a &lt;strong&gt;br&lt;/strong&gt; tag to add a line break in my paragraph. Watch!
+				&lt;br&gt;
+				There it was! Also, I can use the &lt;strong&gt;strong&lt;/strong&gt; tag to make certain words bold!
+				The horizontal line below is there thanks to a &lt;strong&gt;hr&lt;/strong&gt; tag.
+			&lt;/p&gt;
+			&lt;hr&gt;
+			&lt;p&gt;
+				We're now in a new paragraph! &lt;a href="http://www.google.com/"&gt;Here&lt;/a&gt; is a link to Google.com, created from an &lt;strong&gt;anchor&lt;/strong&gt; tag.
+				Below, you can find an image that was added using the &lt;strong&gt;img&lt;/strong&gt; tag. 
+				Also, there is a table that was constructed using the &lt;strong&gt;table&lt;/strong&gt;, &lt;strong&gt;tr&lt;/strong&gt;, and &lt;strong&gt;td&lt;/strong&gt; tags.
+			&lt;/p&gt;
+			&lt;img src="http://i.imgur.com/fUkvDkw.png" alt="A bunny with a pancake on its head!"&gt;
+			&lt;table border="1px"&gt;
+				&lt;tr&gt;
+					&lt;td&gt;This is the first element in the table!&lt;/td&gt;
+					&lt;td&gt;I'm still in the first row, but now in the second column!&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td&gt;Now we're in the second row!&lt;/td&gt;
+					&lt;td&gt;Still in the second row!&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		&lt;/body&gt;
+	&lt;/html&gt;
 	</code></pre>
 	To see what this page looks like, you can copy and paste the code into your own html document! Simply open up a new file in notepad and paste the code in. Name the file whatever you want, but make sure you change the file's extension to ".html"! After that, open that file in your favorite web browser.
 	<br><br>
@@ -109,7 +109,7 @@ title: HTML/CSS Tutorial
 </p>
 <p class="sectionTitle">Some additional notes on HTML</p>
 <p class="writing">
-	When writing HTML code, indentations and newlines are exclusively used to make the <em>code</em> easier to read, but likely won't affect the <em>content</em>. For example, all of the tabs in the HTML document above could be removed and the resulting document would look exactly the same. In fact, the entire document could technically be written on one line and still look the same when rendered in a browser! The lesson to take away here is that HTML ignores whitespace. If you want to add a line break to some text you're writing, use a <strong>&ltbr&gt</strong> tag.
+	When writing HTML code, indentations and newlines are exclusively used to make the <em>code</em> easier to read, but likely won't affect the <em>content</em>. For example, all of the tabs in the HTML document above could be removed and the resulting document would look exactly the same. In fact, the entire document could technically be written on one line and still look the same when rendered in a browser! The lesson to take away here is that HTML ignores whitespace. If you want to add a line break to some text you're writing, use a <strong>&lt;br&gt;</strong> tag.
 	<br><br>
-	Some HTML tags involve more than just their tagname and content. Many tags have optional extra parameters called "attributes". An example of this is in the <strong>anchor</strong> tag in the sample page. The <strong>a</strong> tag uses the "href" attribute to point to whatever webpage we want it to link to. In our case, we had "href='http://www.google.com'" to make it link to Google.com. Another example of this is the <strong>&ltimg&gt</strong> tag. We use the "src" attribute to refer the image to a specific picture hosted on the web. There are many attributes for many tags! Note that attributes always go in the opening tag, but never in the closing tag. 
+	Some HTML tags involve more than just their tagname and content. Many tags have optional extra parameters called "attributes". An example of this is in the <strong>anchor</strong> tag in the sample page. The <strong>a</strong> tag uses the "href" attribute to point to whatever webpage we want it to link to. In our case, we had "href='http://www.google.com'" to make it link to Google.com. Another example of this is the <strong>&lt;img&gt;</strong> tag. We use the "src" attribute to refer the image to a specific picture hosted on the web. There are many attributes for many tags! Note that attributes always go in the opening tag, but never in the closing tag. 
 </p>
