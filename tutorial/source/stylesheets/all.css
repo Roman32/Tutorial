@@ -45,8 +45,15 @@ p.writing{
   height: 290px;
   width: 600px;
 }
-table, th, td {
+table, th {
     border: 1px solid black;
     padding: 10px;
     margin: 0px 250px 0px;
 }
+
+td{
+  border: 1px solid black;
+    padding: 10px;
+  text-align: center;
+}
+
