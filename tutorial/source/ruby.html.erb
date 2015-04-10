@@ -6,12 +6,12 @@ title: Ruby tutorial
   <br />
   <img  class="rubyLogo" src ="images/ruby.png" alt="ruby gem">
   <p class="rubyTitle"> Welcome to the Ruby tutorial for CSE 3901!</p>
-  <p class="sectionTitle">Introduction:</p>
+  <p class="sectionTitle" id="rubyIntroduction">Introduction:</p>
     <p class="writing"> 
     	The purpose of this tutorial is to ease you into the use of the Ruby programming language which is used heavily in the CSE 3901 course.  While Ruby has some aspects which you are familiar with from Java, it also has many key differences as well.  The goal of this tutorial is to highlight these differences and to apply what you know about Java to Ruby.  This document will provide the  basic nuances of the Ruby programming language as well as some examples.  Welcome to the wonderful world of Ruby! 
   </p>
   <br />
-  <p class="sectionTitle">Data Types and Variables</p>
+  <p class="sectionTitle" id="rubyDataTypesAndVariables">Data Types and Variables</p>
   <img class=" rubySide smallImg" src="images/class.gif" alt= "ruby class tree">
   <p class="writing">
   	The first key aspect of Ruby is to understand that everything is an object. It is object-oriented like Java, but everything is an object. This includes the simple "integer primatives" (in Ruby they are objects from the Fixnum class) you are accustomed to in Java.  Also in Ruby, there are classes as well.  Ruby uses classes for inheritance.  The image to the right is an execellent illustration of object/class heiherarchy.
@@ -62,7 +62,7 @@ title: Ruby tutorial
   	# arrays are dynamic, can contain different value types; integers, strings and an array all in one!
   </code></pre>
   <p class="writing">Another quick note: If you haven't noticed yet, ';' at the end of statements in Ruby are optional.  In fact, it is convention to leave them off!</p>
-  <p class="sectionTitle"> Math and Logical Operators</p>
+  <p class="sectionTitle" id="rubyMathAndLogic"> Math and Logical Operators</p>
   <p class="writing">
   	The math and logical operations in Ruby work almost identical to they way they do in Java. The basic operators of '+,-,/,*' all work the same way.  '%' is modulo, not remainder, so take care to mind this difference.  When dividing a negative number (-1/3) in Ruby, it rounds towards -infinity, not 0.  A new operator is the '**' which is for exponents.  Logical operators have some old and new flavors to them.  Ruby still has the standard '||,&amp;&amp;,!,!=,==', and also adds the words 'and,or,not'; however, the words take lower precedence.  Ruby has arithmetic and logical concatination as follows '+=,-=,*=,/=,%=,**= &amp;&amp;,||='.  One missed feature in Ruby is the '++,--' operations. A big pitfall for new students making the transistion from Java to Ruby is the '==' and '.equal?'
   	operation.  Let's look at this example.
@@ -80,7 +80,7 @@ title: Ruby tutorial
 
   	Note:  # is used for comments in Ruby, not // like in Java.
   </code></pre>
-  <p class="sectionTitle">Comments</p>
+  <p class="sectionTitle" id="rubyComments">Comments</p>
   <p class="writing">
   Commenting code is annoying. Commenting code is time-consuming and dull. It can also save you from the terrible fate of looking at your code, realizing it doesn't work, and that you don't know how to fix it because you don't know which part of your code does what. Comments are important. Single-line comments are preceded by the # character. Multi-line comments are surrounded by "==begin" and "==end".
   </p>
@@ -95,7 +95,7 @@ title: Ruby tutorial
 =end
   </code>
   </pre>
-  <p class="sectionTitle">Strings</p>
+  <p class="sectionTitle" id="rubyStrings">Strings</p>
   <p class="writing">
   Strings are an important data type, and have quite a bit of functionality associated with them. Strings are surrounded by "" or '', and have many methods that can be used with them. These include things like length, start_with?, include?, upcase, replace, slice, and others. Here are some examples of what they can do.
   <pre>
@@ -127,7 +127,7 @@ title: Ruby tutorial
   <p class="writing">
   A pretty useful feature, to be sure. It can evaluate expressions between variables, too, as seen here.
   </p>
-  <p class="sectionTitle">Ranges</p>
+  <p class="sectionTitle" id="rubyRanges">Ranges</p>
   <p class="writing">
   One interesting and useful class available in Ruby is the Range class. This defines a range of something, usually numbers, but can also be strings. They are defined by the syntax lowvalue..highvalue, such as 0..5 or 'bad'..'bag'. These will automatically include all integers between the limits, or all possible strings that go alphabetically between the limits. In this example, 0..5 includes 0, 1, 2, 3, 4, 5, and 'bad'..'bag' includes 'bad','bae','baf', and 'bag'.
   </p>
@@ -154,7 +154,7 @@ title: Ruby tutorial
   <p class="writing">
   Ranges are especially useful with things like for loops, which we will discuss later. So remember how to use ranges!
   </p>
-  <p class="sectionTitle">Loops/Conditionals</p>
+  <p class="sectionTitle" id="rubyLoops">Loops/Conditionals</p>
   <p class="writing">
   Flow control is important in any program that has to respond to any sort of input. Loops and conditional statements are how we accomplish that goal.
   </p>
@@ -181,7 +181,7 @@ title: Ruby tutorial
   <p class="writing">
   Ruby does not like frills and unnecessary writing, just like programmers! Ruby wants simple code, and only the bare minimum, as shown here.
   </p>
-  <p class="sectionTitle">While Loops</p>
+  <p class="sectionTitle" id="rubyWhileLoops">While Loops</p>
   <p class="writing">
   While loops are the same while loops you recognize from any other languages you have used. But as we all know, exact syntax is important with computers. The format of a while loop is actually somewhat flexible, as there are a couple different ways syntactically correct while loops can be written.
   </p>
@@ -247,7 +247,7 @@ title: Ruby tutorial
   end
   </code>
   </pre>
-  <p class="sectionTitle">For Loops/Each Loops</p>
+  <p class="sectionTitle" id="rubyForEachLoops">For Loops/Each Loops</p>
   <p class="writing">
   For loops are also critical for most languages. Ruby's take on for loops is a bit different from what you're used to, however. The general syntax:
   </p>
@@ -293,7 +293,7 @@ title: Ruby tutorial
 
   </p>
 
-  <p class="sectionTitle">If/Else Statements</p>
+  <p class="sectionTitle" id="rubyIfElse">If/Else Statements</p>
   <p class="writing">
   If loops are the backbone of efficiency, conditional statements are the backbone of choice and control. "If" statements allow the programmer to control different paths of the code. These statements are, of course, presented in Ruby without frills. Here's the basic syntax:
   </p>
@@ -350,7 +350,7 @@ title: Ruby tutorial
   <p class="writing">
   If-elsif-else structures are vital, so use them well!
   </p>
-  <p class="sectionTitle">Case Statements</p>
+  <p class="sectionTitle" id="rubyCaseSwitch">Case Statements</p>
   <p class="writing">
   If you've coded in C, Java, or many other languages, you're probably familiar with switch-case statements. Ruby has case-when statements, which do all of the same things.
   </p>
@@ -376,7 +376,7 @@ title: Ruby tutorial
   <p class="writing">
   Now that you've seen it, it makes sense. Remember, no parentheses needed, no braces needed, nothing more than is necessary. 
   </p>
-  <p class="sectionTitle">Functions</p>
+  <p class="sectionTitle" id="rubyFunctions">Functions</p>
   <p class="writing">
   Writing functions in Ruby is simple. Like many other things in Ruby, it has less wordiness than functions you're used to in other languages.
   </p>
@@ -406,7 +406,7 @@ title: Ruby tutorial
   b = func(2,5).equal? 7
   </code>
   </pre>
-  <p class="sectionTitle">Classes</p>
+  <p class="sectionTitle" id="rubyClasses">Classes</p>
   <p class="writing">
   	The best way to talk about creating your own class in Ruby is to just give an example.  It is very easy, and Ruby provides shortcuts so it is even simpler!
   </p>
