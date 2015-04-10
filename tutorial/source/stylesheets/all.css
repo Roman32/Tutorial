@@ -20,6 +20,12 @@ p.writing{
   text-align: left;
 }
 
+p.writing1{
+  max-width: 55%;
+  font-size: 15px;
+  text-align: left;
+}
+
 .rubyTitle{
   font-weight: bold;
   font-size: 25px;
