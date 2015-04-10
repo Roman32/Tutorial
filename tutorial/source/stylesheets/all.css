@@ -36,3 +36,12 @@ p.writing{
   margin-left: auto;
   display: block;
 }
+
+.rubySide{
+  float: right;
+}
+
+.rubySide.smallImg{
+  height: 290px;
+  width: 600px;
+}
