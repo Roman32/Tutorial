@@ -7,21 +7,77 @@ title: Ruby tutorial
   <img  class="rubyLogo" src ="images/ruby.png" alt="ruby gem">
   <p class="rubyTitle"> Welcome to the Ruby tutorial for CSE 3901!</p>
   <p class="sectionTitle">Introduction:</p>
-    <p class="writing"> The purpose of this tutorial is to ease you into the use of the Ruby programming language which is used heavily in the CSE 3901 course.  While Ruby has some aspects which you are familiar with from Java, it also has many key differences as well.  The goal of this tutorial is to highlight these differences and to apply what you know about Java to Ruby.  This document will provide the  basic nuances of the Ruby programming language as well as some examples.  Welcome to the wonderful world of Ruby! 
+    <p class="writing"> 
+    	The purpose of this tutorial is to ease you into the use of the Ruby programming language which is used heavily in the CSE 3901 course.  While Ruby has some aspects which you are familiar with from Java, it also has many key differences as well.  The goal of this tutorial is to highlight these differences and to apply what you know about Java to Ruby.  This document will provide the  basic nuances of the Ruby programming language as well as some examples.  Welcome to the wonderful world of Ruby! 
   </p>
   <br />
   <p class="sectionTitle">Data Types and Variables</p>
   <img class=" rubySide smallImg" src="images/class.gif" alt= "ruby class tree">
-  <p class="writing">The first key aspect of Ruby is to understand that everything is an object. This includes the simple "integer primatives" (in Ruby they are objects from the Fixnum class) you are accustomed to in Java.  Also in Ruby, there are classes as well.  Ruby uses classes for inheritance.  The image to the right is an execellent illustration of object/class heiherarchy.
-  Classes will be expanded upon soon.  One of the first things you were taught in the software sequence was each primative variable has a data type, which must be declared when the variable is declared and initialized. In Ruby, there are no data types! See the example below: </p>
+  <p class="writing">
+  	The first key aspect of Ruby is to understand that everything is an object. It is object-oriented like Java, but everything is an object. This includes the simple "integer primatives" (in Ruby they are objects from the Fixnum class) you are accustomed to in Java.  Also in Ruby, there are classes as well.  Ruby uses classes for inheritance.  The image to the right is an execellent illustration of object/class heiherarchy.
+  	Classes will be expanded upon soon.  One of the first things you were taught in the software sequence was each primative variable has a data type, which must be declared when the variable is declared and initialized. In Ruby, there are no data types! See the example below: 
+  </p>
   <pre><code class="ruby">
   x = 31
   puts x => 31
   x = "doggie"
   puts x => doggie
   </code></pre>
-  <p class="writing">  As you can see, the variable x was first made an int, then later changed to a string. There is no type declaration at any point and was changed very easily!</p>
+  <p class="writing">  
+  	As you can see, the variable x was first made an int, then later changed to a string. There is no type declaration at any point and was changed very easily! Ruby has classes that are similar to Java primative data types among other and more:
+  </p>
+  <table>
+  	<th> Java</th><th>Ruby</th>
+  	<tr>
+  		<td> String</td><td>String</td>
+  	</tr>
+  	<tr>
+  		<td> int</td><td>Bignum,Fixnum</td>
+  	</tr>
+  	<tr>
+  		<td> double</td><td>DNE</td>
+  	</tr>
+  	<tr>
+  		<td> DNE</td><td>Ranges</td>
+  	</tr>
+  	<tr>
+  		<td> null</td><td>nil</td>
+  	</tr>
+  	<tr>
+  		<td> this</td><td>self</td>
+  	</tr>
+  	<tr>
+  		<td> arrays of same type</td><td>mixed type</td>
+  	</tr>
+  	</table>
+  <p class="writing">The last table row is a neat feature; let's look at an example.</p>
+  <pre><code class="ruby">
+  #Java
+  	int [] myArr = [1,2,5,6,7];
+  	#all values must be of same primitive type, and static length;
+  #Ruby
+  	myArr =[1,2,"three",[4,5,6]]
+  	# arrays are dynamic, can contain different value types; integers, strings and an array all in one!
+  </code></pre>
+  <p class="writing">Another quick note: If you haven't noticed yet, ';' at the end of statements in Ruby are optional.  In fact, it is convention to leave them off!</p>
+  <p class="sectionTitle"> Math and Logical Operators</p>
+  <p class="writing">
+  	The math and logical operations in Ruby work almost identical to they way they do in Java. The basic operators of '+,-,/,*' all work the same way.  '%' is modulo, not remainder, so take care to mind this difference.  When dividing a negative number (-1/3) in Ruby, it rounds towards -infinity, not 0.  A new operator is the '**' which is for exponents.  Logical operators have some old and new flavors to them.  Ruby still has the standard '||,&&,!,!=,==', and also adds the words 'and,or,not'; however, the words take lower precedence.  Ruby has arithmetic and logical concatination as follows '+=,-=,*=,/=,%=,**= &&=,||='.  One missed feature in Ruby is the '++,--' operations. A big pitfall for new students making the transistion from Java to Ruby is the '==' and '.equal?'
+  	operation.  Let's look at this example.
+  </p>
+  <pre><code class="ruby">
+  	word1,word2 ="same","same"
 
+  	word1 == word2 => true #Have the same value
+
+  	word1.equal? word2 => false #different reference id
+
+  	word1.eql? word2 => false #Checks for value and reference id
+
+  	##Remember, everything is an object!
+
+  	Note:  # is used for comments in Ruby, not // like in Java.
+  </code></pre>
   <p class="sectionTitle">Loops/Conditionals</p>
   <p class="writing">
   	Flow control is important in any program that has to respond to any sort of input. Loops and conditional statements are how we accomplish that goal.
