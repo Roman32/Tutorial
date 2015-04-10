@@ -7,7 +7,7 @@ title: JavaScript Tutorial
   <img  class="JSLogo" src ="images/Javascript.png" alt="JavaScipt Logo">
   <p class="rubyTitle"> Welcome to the JavaScript tutorial for CSE 3901!</p>
   <p class="sectionTitle">Introduction:</p>
-  <p class="writing"> JavaScript is a programming language that builds off of HTML to add extra functionality to webpages. All that is required is to host or cache a copy of the JavaScript library on a browser or server and the all of its features are at your fingertips.  Some of JavaScript’s biggest strengths are:
+  <p class="writing1"> JavaScript is a programming language that builds off of HTML to add extra functionality to webpages. All that is required is to host or cache a copy of the JavaScript library on a browser or server and the all of its features are at your fingertips.  Some of JavaScript’s biggest strengths are:
   <UL>
   	<LI>Cross-Platform</LI>
   	<LI>Meant to be integrated with HTML</LI>
@@ -20,7 +20,7 @@ title: JavaScript Tutorial
    </p>
   <br />
   <p class="sectionTitle">Setup and Basic Syntax</p>
-  <p class="writing">Setting up and using JavaScript is incredibly easy. Before you start typing up your JavaScript, you should think about where to place it in your HTML. The most common places are:
+  <p class="writing1">Setting up and using JavaScript is incredibly easy. Before you start typing up your JavaScript, you should think about where to place it in your HTML. The most common places are:
 
   <UL>
   	<LI>Inside the &lthead&gt* </LI>
@@ -33,40 +33,80 @@ title: JavaScript Tutorial
 	**if the script is inline, then it's executed as the body is displayed
   </UL>
 
-  In addition to deciding where to place your JavaScript, there are a few things you should understand about its syntax. First, JavaScript is different than some programming languages in that semi-colons aren’t required, but you should separate your arguments and variables on different lines so they can be interpreted correctly. Next, all of your JavaScript code should be encapsulated using the &ltscript&gt tags. This is how your browser will know what code is HTML and what is JavaScript when it goes to load your webpage.
-
-  <pre><code>&lt!DOCTYPE html&gt
-	&lthtml&gt
-	&ltbody&gt
-
-	&lth1&gtYour Turn!&lt/h1&gt
-	&ltp&gt Edit the function to change what is written to the HTML document: &lt/p&gt
-	&ltscript&gt document.write("your text here!"); &lt/script&gt
-	&lt/body&gt
-	&lt/html&gt
-	</code></pre>
-	<br/>
-	Try it for yourself using the link below!
-	<br/>
-	<a href ="https://jsfiddle.net/ds3pywop/2/"> https://jsfiddle.net/ds3pywop/2/ </a>
+  In addition to deciding where to place your JavaScript, there are a few things you should understand about its syntax. First, JavaScript is different than some programming languages in that semi-colons aren’t required, but you should separate your arguments and variables on different lines so they can be interpreted correctly. Next, all of your JavaScript code should be encapsulated using the &ltscript&gt tags. This is how your browser will know what code is HTML and what is JavaScript when it goes to load your webpage. <br/><br/>
+  So let's start and dive straight into writing some code!
+  </p>
+  </p>
+  <p class="sectionTitle">Output</p>
+  <p class="writing1">
+  	JavaScript has a few ways that you can display things to a user. The first is by editing your HTML document both on the fly with via user-controlled actions, like clicking on a button, or typing into a text box or with regular functions. The other primary way of displaying information to a user is through a window alert.
+Depending on the location of your &ltscript&gt tags in your HTML document, the document.write() function will add text the document:
+  <br/>
+  <br/>
+  	<iframe
+  		style="width: 100%; height: 200px"
+ 		src="https://jsfiddle.net/ds3pywop/2/embedded/html,result/">
+	</iframe>
+	<strong>Try the above code for yourself by clicking on the link in the top right corner.</strong>
 	<br/><br/>
 	You can also register events to accept user input and output information to them. Using this method, you do not need to encapsulate your JavaScript. Note that this method clears the entire HTML in your document above the execution point:
-	<br/>
-	<pre><code>
-		&lt!DOCTYPE html&gt
-		&lthtml&gt
-		&ltbody&gt
-
-		&lth1>Your Turn!&lt/h1&gt
-		&ltp&gt Edit the event handler to change what is written to the HTML document: &lt/p&gt
-		&ltbutton type=”button” onclick=”document.write('Your text here')”>Click me!&lt/button&gt
-		&lt/body&gt
-		&lt/html&gt
-	</code></pre>
-	<br/>
-	Try it for yourself using the link below!
-	<br/>
-	<a href ="https://jsfiddle.net/by13pkve/3/"> https://jsfiddle.net/by13pkve/3/ </a>
+	
 	<br/><br/>
+	<iframe
+  style="width: 100%; height: 200px;" 
+  src="https://jsfiddle.net/by13pkve/3/embedded/html,result/">
+</iframe>
+<strong>Try the above code for yourself by clicking on the link in the top right corner.</strong>
+<br/><br/>
+
+	If you want to edit specific elements in your HTML tree, all you have to know is their id and you can use JavaScript to edit their contents on the fly as well:
+	<br/><br/>
+	<iframe
+  		style="width: 100%; height: 250px"
+ 		src=" https://jsfiddle.net/ygwrozuy/embedded/html,result/">
+	</iframe>
+	<strong>Try the above code for yourself by clicking on the link in the top right corner.</strong>
+	<br/><br/>
+</p>
+
+<p class="sectionTitle"> Variables, Functions, and Flexibility</p>
+<p class = "writing1">
+	JavaScript has a unique property where variables can be assigned to almost anything you could think of. There is only one type of ‘variable’ and the only thing that describes its behavior is what kind of data is assigned to it. This flexibility means that they can be used to do a multitude of different things. Here are a few examples of ways you can use variables to achieve a few different effects:
+	
+	<br/><br/>
+	<iframe width="100%" height="150" src="//jsfiddle.net/yzc6ynku/1/embedded/js,result/" ></iframe>
+	<strong>Try the above code for yourself by clicking on the link in the top right corner.</strong>
+	<br/><br/>
+	Not only do you have all of this flexibility with JavaScript, but you can also perform classic mathematical operations and comparisons in JavaScript with numbers, strings, and boolean values, just like in other programming languages. JavaScript also offers for, if, while and do while loops like other programming languages as well:
+
+	<br/><br/>
+	<iframe width="100%" height="150" src="https://jsfiddle.net/q2cujs6y/embedded/js,result/" ></iframe>
+	<strong>Try the above code for yourself by clicking on the link in the top right corner.</strong>
+	<br/><br/>
+
+	In addition to this you can organize your JavaScript code into functions that will allow you to make your code easier to read and interpret, in addition to the traditional reasons you use functions:
+
+	<br/><br/>
+	<iframe width="100%" height="200" src="https://jsfiddle.net/qrdoyj84/embedded/js,result/" ></iframe>
+	<strong>Try the above code for yourself by clicking on the link in the top right corner.</strong>
+	<br/><br/>
+</p>
+<p class="sectionTitle">Objects and Their Properites</p>
+<p class="writing1">
+	Objects are a great way to create and organize logical and related groups of variables, and by organizing these variables into objects, you can access them in special ways to make keeping track of your data easier:
+
+	<br/><br/>
+	<iframe width="100%" height="200" src="http://jsfiddle.net/uqwa8gt5/embedded/js,result/" ></iframe>
+	<strong>Try the above code for yourself by clicking on the link in the top right corner.</strong>
+	<br/><br/>
+
+	Objects are also cool because you can store actual functions as object properties
+	<br/><br/>
+	<iframe width="100%" height="200" src="http://jsfiddle.net/uqwa8gt5/embedded/js,result/" ></iframe>
+	<strong>Try the above code for yourself by clicking on the link in the top right corner.</strong>
+	<br/><br/>
+</p>
+
+
 </p>
 </div><!-- .welcome -->
