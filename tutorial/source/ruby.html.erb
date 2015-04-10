@@ -80,6 +80,80 @@ title: Ruby tutorial
 
   	Note:  # is used for comments in Ruby, not // like in Java.
   </code></pre>
+  <p class="sectionTitle">Comments</p>
+  <p class="writing">
+  Commenting code is annoying. Commenting code is time-consuming and dull. It can also save you from the terrible fate of looking at your code, realizing it doesn't work, and that you don't know how to fix it because you don't know which part of your code does what. Comments are important. Single-line comments are preceded by the # character. Multi-line comments are surrounded by "==begin" and "==end".
+  </p>
+  <pre>
+  <code class="ruby">
+  "This is executable code." #This is not.
+
+  "This is also executable code."
+
+=begin
+    This is definitely not.
+=end
+  </code>
+  </pre>
+  <p class="sectionTitle">Strings</p>
+  <p class="writing">
+  Strings are an important data type, and have quite a bit of functionality associated with them. Strings are surrounded by "" or '', and have many methods that can be used with them. These include things like length, start_with?, include?, upcase, replace, slice, and others. Here are some examples of what they can do.
+  <pre>
+  <code class="ruby">
+  s = "Go Bucks!"
+  s.length      #=> 9
+  s.start_with? "Go" #=> true
+  s.upcase      #=> "GO BUCKS", s does not change
+  s.split       #=> ["Go", "Bucks"] by default, splits at whitespace
+  s.slice(3,2)  #=> "Bu"
+  s.replace("O-H-I-O") #=> "O-H-I-O"
+  </code>
+  </pre>
+  <p class="writing">
+  String methods that return boolean values tend to end in the "?", methods that modify the string tend to end in "!", with the exception of replace. The slice method, which gets a substring, has a maximum of 2 parameters. The first is the position in the string to start the substring, and the second is how many characters wanted in the substring. In the example above, it started at position 3 ("B"), and gave 2 characters, resulting in "Bu".
+  </p>
+  <p class="writing">
+  One important thing that can be done with strings is the evaluation of expressions within strings, which is known as interpolation. It can be done with the #{} operator, and any expression inside that expression is evaluated. This will only occur, however, if the string is enclosed within double quotes ("").
+  </p>
+  <pre>
+  <code class="ruby">
+  a = 2
+  b = 4
+  puts "2 + 4 = #{a+b}"
+
+  #=> 2 + 4 = 6
+  </code>
+  </pre>
+  <p>
+  A pretty useful feature, to be sure. It can evaluate expressions between variables, too, as seen here.
+  </p>
+  <p class="sectionTitle">Ranges</p>
+  <p class="writing">
+  One interesting and useful class available in Ruby is the Range class. This defines a range of something, usually numbers, but can also be strings. They are defined by the syntax lowvalue..highvalue, such as 0..5 or 'bad'..'bag'. These will automatically include all integers between the limits, or all possible strings that go alphabetically between the limits. In this example, 0..5 includes 0, 1, 2, 3, 4, 5, and 'bad'..'bag' includes 'bad','bae','baf', and 'bag'.
+  </p>
+  <p class="writing">
+  You can use 2 periods to make the bounds inclusive, or 3 to make them exclusive. The method to_a allows you to return an array made of all the values in the range.
+  </p>
+  <pre>
+  <code class = "ruby">
+  numrg = 0..5
+  numrg.to_a #=> [0, 1, 2, 3, 4, 5]
+  </code>
+  </pre>
+  <p class="writing">
+  Another useful operator with ranges is the === operator. This test for inclusion within a range. Take a look:
+  </p>
+  <pre>
+  <code class="ruby">
+  numrg = 0..5
+
+  numrg === 2 #=> true
+  numrg === 6 #=> false
+  </code>
+  </pre>
+  <p class="writing">
+  Ranges are especially useful with things like for loops, which we will discuss later. So remember how to use ranges!
+  </p>
   <p class="sectionTitle">Loops/Conditionals</p>
   <p class="writing">
   Flow control is important in any program that has to respond to any sort of input. Loops and conditional statements are how we accomplish that goal.
@@ -302,7 +376,36 @@ title: Ruby tutorial
   <p class="writing">
   Now that you've seen it, it makes sense. Remember, no parentheses needed, no braces needed, nothing more than is necessary. 
   </p>
+  <p class="sectionTitle">Functions</p>
+  <p class="writing">
+  Writing functions in Ruby is simple. Like many other things in Ruby, it has less wordiness than functions you're used to in other languages.
+  </p>
+  <p class="writing">
+  Functions are defined by the "def" keyword. Like other structures that enclose code, it ends with an "end". As Ruby has dynamic data typing, parameters do not have a defined type.
+  </p>
+  <pre>
+  <code class="ruby">
+  #function definition
+  def func(x, y)
+    x + y
+  end
+  </code>
+  </pre>
+  <p>
+  One thing you likely noticed is that there was no return value in the function. That's because you don't need to explicitly define a return in Ruby functions! If no return is defined, it will return the value of the last statement in the function.
+  </p>
+  <p>
+  Calling a function is very simple as well. When calling a function, parentheses can be omitted, and usually are. The only time parentheses are generally used when calling a function is when it has arguments, and there is chaining. Here's an example
+  </p>
+  <pre>
+  <code class="ruby">
+  #calling a function
+  x = func 2,5
 
+  #calling a function with parameters and chaining
+  b = func(2,5).equal? 7
+  </code>
+  </pre>
   <p class="sectionTitle">Classes</p>
   <p class="writing">
   	The best way to talk about creating your own class in Ruby is to just give an example.  It is very easy, and Ruby provides shortcuts so it is even simpler!
