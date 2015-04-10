@@ -37,6 +37,12 @@ p.writing{
   display: block;
 }
 
+<<<<<<< HEAD
+.JSLogo{
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
 .rubySide{
   float: right;
 }
@@ -44,6 +50,7 @@ p.writing{
 .rubySide.smallImg{
   height: 290px;
   width: 600px;
+>>>>>>> ae2d1e1b97198714977326f2219eeae8d38cdf60
 }
 table, th {
     border: 1px solid black;
