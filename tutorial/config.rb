@@ -54,6 +54,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 page '/sampleHTMLPage.html', :layout=>false
+page '/sampleCSSPage.html', :layout=>false
 
 # Build-specific configuration
 configure :build do
