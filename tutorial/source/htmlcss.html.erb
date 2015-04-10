@@ -7,14 +7,14 @@ title: HTML/CSS Tutorial
 </div>
 <br />
 <p class="rubyTitle">Welcome to the HTML/CSS Tutorial for CSE3901!</p>
-<p class="sectionTitle">Introduction</p>
+<p class="sectionTitle" id="HTMLCSSIntro">Introduction</p>
 <p class="writing">
 	The purpose of this tutorial is to introduce you to HTML and CSS. We'll start with HTML. HTML is an acronym which stands for '<strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage'. What does this mean? Essentially, HTML is a language that web browsers read. HTML tells web browsers how to organize content. That's as simple as it gets! HTML is made up of <strong>&lt;tags&gt;</strong>. We'll talk more about those later.
 </p>
 <p class="writing">
 	We'll touch more on CSS after HTML, but a brief introduction is in order. As HTML grew more advanced, browsers were capable of doing more and more fancy tricks to make content look incredibly nice and, well, stylish. Eventually, it became cumbersome to both organize and style content in the same file. CSS was created to fix this problem. CSS is an acronym that stands for '<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets'. We'll worry about what that specifically means later. For now, just remember that HTML is used to oragnize content, and CSS is used to style content.
 </p>
-<p class="sectionTitle">Tags!</p>
+<p class="sectionTitle" id="tags">Tags!</p>
 <p class="writing">
 	HTML is based on the usage of <strong>tags</strong>. What are tags? Tags are keywords that're written inside of angle brackets (&lt; and &gt;). Nearly all tags consist of both an opening part (<strong>&lt;tagname&gt;</strong>) and a closing part (<strong>&lt;/tagname&gt;</strong>). Within these two parts, you can type in content in the format of plaintext. You can also nest tags within one another. The basic format of your document should look something like this:
 	<pre><code class="html">
@@ -44,7 +44,7 @@ title: HTML/CSS Tutorial
 	<br><br>
 	A quick note to aide readability, throughout this tutorial I will be referring to tags specifically by making them <strong>bold</strong>.
 </p>
-<p class="sectionTitle">Let's get some essential tags out of the way</p>
+<p class="sectionTitle" id="essentialTags">Let's get some essential tags out of the way</p>
 <p class="writing">
 	There are certain tags that nearly every HTML document will have. These tags are exemplified below in a sample HTML document:
 	<pre><code class="html">
@@ -67,7 +67,7 @@ title: HTML/CSS Tutorial
 		<li>The <strong>body</strong> tag is where you include most of your content. This is where the "body" of your webpage is. Essentially, everything you see in your browser window is due to content within the <strong>body</strong> tag.</li>
 	</ul>
 </p>
-<p class="sectionTitle">Making your first page</p>
+<p class="sectionTitle" id="yourFirstPage">Making your first page</p>
 <p class="writing">
 	Below, you can see the code for a very simple HTML page that uses the tags we've discussed so far:
 	<pre><code class="html">
@@ -108,17 +108,17 @@ title: HTML/CSS Tutorial
 	<br><br>
 	Alternatively, to see what kind of page this code will create, click <%= link_to 'this','sampleHTMLPage.html'%> link.
 </p>
-<p class="sectionTitle">Some additional notes on HTML</p>
+<p class="sectionTitle" id="additoinalHTMLNotes">Some additional notes on HTML</p>
 <p class="writing">
 	When writing HTML code, indentations and newlines are exclusively used to make the <em>code</em> easier to read, but likely won't affect the <em>content</em>. For example, all of the tabs in the HTML document above could be removed and the resulting document would look exactly the same. In fact, the entire document could technically be written on one line and still look the same when rendered in a browser! The lesson to take away here is that HTML ignores whitespace. If you want to add a line break to some text you're writing, use a <strong>&lt;br&gt;</strong> tag.
 	<br><br>
 	Some HTML tags involve more than just their tagname and content. Many tags have optional extra parameters called "attributes". An example of this is in the <strong>anchor</strong> tag in the sample page. The <strong>a</strong> tag uses the "href" attribute to point to whatever webpage we want it to link to. In our case, we had "href='http://www.google.com'" to make it link to Google.com. Another example of this is the <strong>&lt;img&gt;</strong> tag. We use the "src" attribute to refer the image to a specific picture hosted on the web. There are many attributes for many tags! Note that attributes always go in the opening tag, but never in the closing tag. 
 </p>
-<p class="sectionTitle">Back to CSS</p>
+<p class="sectionTitle" id="backToCSS">Back to CSS</p>
 <p class="writing">
 	By now you should have a solid understanding of HTML and how it helps you organize your content. But how is it that people can make content looking neat and fancy? CSS to the rescue!
 </p>
-<p class="sectionTitle">Inline Styling</p>
+<p class="sectionTitle" id="inlineStyling">Inline Styling</p>
 <p class="writing">
 	In the sample HTML document above, we have little to no custom styling. All the colors, fonts, and text sizes are the default ones. We can spice things up by adding the "style" attribute to different tags. For example, let's say we want to make our first paragraph red. There's a very easy way to do this! See the code below:
 	<pre><code class="html">
@@ -128,7 +128,7 @@ title: HTML/CSS Tutorial
 	<br><br>
 	Defining styles within the style attribute of a specific element like this is known as inline styling. There are other ways of styling that we'll soon learn about, but it should be noted that inline styling is the highest priority of style. Among the different ways of defining style, many times there can be conflicts that're resolved using a predefined heirarchy of which styles are most important. Inline styles are very high priority. Keep this in mind as we learn about the other ways of styling a document.
 </p>
-<p class="sectionTitle">Internal Style Sheet</p>
+<p class="sectionTitle" id="internalStyleSheet">Internal Style Sheet</p>
 <p class="writing">
 	We already learned about where the "cascading" in CSS comes from, and the "style" is fairly obviously from the function of CSS (adding style), but what exactly does "sheets" mean? Right now, we're going to learn about something called an "internal style sheet". Take a code snippet below taken from a sample HTML document:
 	<pre><code class="html">
@@ -147,7 +147,7 @@ title: HTML/CSS Tutorial
 	<br><br>
 	Another thing to note is that, even though the "color" style is going to be applied to the <strong>p</strong> tag only, if there was a nested tag with other content inside of the <strong>p</strong> tag then that content would also receive that style.
 </p>
-<p class="sectionTitle">Let's see an example</p>
+<p class="sectionTitle" id="CSSExample">Example of Internal Style Sheet</p>
 <p class="writing">
 	Let's use a simplified version of our sample HTML page from before and try to style it how we want using an inline style sheet. Let's try to make the text in the document red, and the background of the page gray. The code we're using looks like this:
 	<pre><code class="html">
@@ -180,11 +180,11 @@ title: HTML/CSS Tutorial
 		<li>The content inside of the h1 element stayed as black text! This was because no style was defined for the color of h1 elements and there was no style that cascaded down for it! If we had the "color:red;" style attached to the <strong>body</strong> or <strong>h1</strong> tags instead, then the text would have changed colors. Also, notice that, despite the inline styling defining paragraphs to have red color, the second paragraph remained black. This was because we used inline styling to trump the style sheet. 
 	</ul>
 </p>
-<p class="sectionTitle">CSS Attributes</p>
+<p class="sectionTitle" id="CSSAttributes">CSS Attributes</p>
 <p class="writing">
 	You can probably guess that CSS is more than just changing the colors of text and backgrounds. There are many <em>many</em> CSS properties that you can define for different elements. You can do things like make certain elements align to one side of the page, or make text wrap a certain way. You can use tables in creative ways to make your webpage look like it's flowing through many different columns. You can define specific fonts for specific elements. The list is literally endless. To see a large list of CSS properties, check out <%= link_to 'this','http://www.blooberry.com/indexdot/css/propindex/all.htm'%> link.
 </p>
-<p class="sectionTitle">IDs and Classes</p>
+<p class="sectionTitle" id="IDsAndClasses">IDs and Classes</p>
 <p class="writing">
 	What happens if you only want style applied to a specific grouping of <strong>p</strong> tags? HTML tags can be assigned attributes called IDs and classes that help with this. 
 	<br><br>
@@ -210,11 +210,11 @@ title: HTML/CSS Tutorial
 	</code></pre>
 	This would style all h1 tags, as well as all tags of the class "regular-paragraph". You can read more about different CSS selectors <%= link_to 'here','http://www.w3schools.com/css/css_selectors.asp'%>.
 </p>
-<p class="sectionTitle">External Style Sheets</p>
+<p class="sectionTitle" id="ExternalStyleSheets">External Style Sheets</p>
 <p class="writing">
 	Remember how we were saying that the point of CSS is to separate the style of your content from how it's organized? Well inline style sheets don't really help with this, since the style is at the top of the document anyway. The solution to this problem is external style sheets. You can write a file using entirely syntax that would normally go between the <strong>style</strong> tags in a file with the .css extension. After doing this, you simply add the line '&lt;link rel="stylesheet" type="text/css" href="filename.css"&gt;' inside of your head tag to include that file's style. An advantage to this is that you can keep the styles of multiple pages consistent by having them all include the same .css file. 
 </p>
-<p class="sectionTitle">Go forth, and conquor!</p>
+<p class="sectionTitle" id="HTMLCSSConclusion">Go forth, and conquor!</p>
 <p class="writing">
 	You now know the basics, but there is still much to learn. There are many good resources, such as <%=link_to 'W3Schools','http://www.w3schools.com/'%> that contain helpful information. Good luck!
 </p>
