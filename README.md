@@ -1,8 +1,8 @@
 # Tutorial
 ## Roles
-* Ruby Manager: Roman
-* HTML/CSS Manager: Sina
-* Javascript Manager: Tom
+* Ruby Manager: Zach
+* HTML/CSS Manager: Steve
+* Javascript Manager: Roman
 
 ## To Run
 Navigate to the tutorial folder (the folder where the 'source' folder is one of the items in your current directory). From there, open a terminal window and run "bundle exec middleman build", then "bundle exec middlman server". After that, open your web browser and navigate to "localhost:4567". Feast your eyes upon your beautiful webpage.
