@@ -12,7 +12,7 @@ Please list who did what for each part of the project, and if anyone [pair progr
 
 * Roman: Worked on Ruby page. wrote setions: Introduction, data types and variables,math and logical operators, and classes. Also set up the css for ruby page, and found the images used on it.
 
-* Sina: Wrote "header" partial. Wrote HTML/CSS page, along with the examples that it had. 
+* Sina: Wrote "header" partial. Wrote HTML/CSS page, along with the examples that it had. Also created the table of contents on the main page.
 
 * Tom: Created the content for the JavaScript section of the website, including all of the example code and demonstrations.
 
