@@ -37,7 +37,6 @@ p.writing{
   display: block;
 }
 
-<<<<<<< HEAD
 .JSLogo{
   margin-right: auto;
   margin-left: auto;
@@ -50,12 +49,15 @@ p.writing{
 .rubySide.smallImg{
   height: 290px;
   width: 600px;
->>>>>>> ae2d1e1b97198714977326f2219eeae8d38cdf60
 }
 table, th {
     border: 1px solid black;
     padding: 10px;
     margin: 0px 250px 0px;
+}
+
+pre{
+  display:inline;
 }
 
 td{

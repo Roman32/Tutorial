@@ -64,7 +64,7 @@ title: Ruby tutorial
   <p class="writing">Another quick note: If you haven't noticed yet, ';' at the end of statements in Ruby are optional.  In fact, it is convention to leave them off!</p>
   <p class="sectionTitle"> Math and Logical Operators</p>
   <p class="writing">
-  	The math and logical operations in Ruby work almost identical to they way they do in Java. The basic operators of '+,-,/,*' all work the same way.  '%' is modulo, not remainder, so take care to mind this difference.  When dividing a negative number (-1/3) in Ruby, it rounds towards -infinity, not 0.  A new operator is the '**' which is for exponents.  Logical operators have some old and new flavors to them.  Ruby still has the standard '||,&&,!,!=,==', and also adds the words 'and,or,not'; however, the words take lower precedence.  Ruby has arithmetic and logical concatination as follows '+=,-=,*=,/=,%=,**= &&=,||='.  One missed feature in Ruby is the '++,--' operations. A big pitfall for new students making the transistion from Java to Ruby is the '==' and '.equal?'
+  	The math and logical operations in Ruby work almost identical to they way they do in Java. The basic operators of '+,-,/,*' all work the same way.  '%' is modulo, not remainder, so take care to mind this difference.  When dividing a negative number (-1/3) in Ruby, it rounds towards -infinity, not 0.  A new operator is the '**' which is for exponents.  Logical operators have some old and new flavors to them.  Ruby still has the standard '||,&amp;&amp;,!,!=,==', and also adds the words 'and,or,not'; however, the words take lower precedence.  Ruby has arithmetic and logical concatination as follows '+=,-=,*=,/=,%=,**= &amp;&amp;,||='.  One missed feature in Ruby is the '++,--' operations. A big pitfall for new students making the transistion from Java to Ruby is the '==' and '.equal?'
   	operation.  Let's look at this example.
   </p>
   <pre><code class="ruby">
@@ -83,16 +83,17 @@ title: Ruby tutorial
   <p class="sectionTitle">Loops/Conditionals</p>
   <p class="writing">
   Flow control is important in any program that has to respond to any sort of input. Loops and conditional statements are how we accomplish that goal.
-  <br />
-  <br />
+  </p>
+  <p class="writing">
   The cool thing that Ruby's syntax allows is for you to write your loops and conditionals in a logical way that makes sense to your eyes, without all the special enclosing characters like {} or ().
-  <br />
-  <br />
+  </p>
+  <p class="writing">
   When you use loops or conditionals in Ruby, the code you want to enclose doesn't need to be put inside braces, and the boolean statement doesn't need parentheses. All you need to do is indent the code you want to enclose and you're good! Simple, looks great, and makes sense.
+  </p>
   <pre>
   <code class = "ruby">
   n = 1
-  while n < 10 do
+  while n &lt; 10 do
     n *= 2
     puts n
   end
@@ -106,12 +107,14 @@ title: Ruby tutorial
   <p class="writing">
   Ruby does not like frills and unnecessary writing, just like programmers! Ruby wants simple code, and only the bare minimum, as shown here.
   </p>
-  <br />
-  <br />
   <p class="sectionTitle">While Loops</p>
   <p class="writing">
   While loops are the same while loops you recognize from any other languages you have used. But as we all know, exact syntax is important with computers. The format of a while loop is actually somewhat flexible, as there are a couple different ways syntactically correct while loops can be written.
+<<<<<<< HEAD
 
+=======
+  </p>
+>>>>>>> 9b864d1a1244a96532cc8065e6472cb8566cc75b
   <pre>
   <code class="ruby">
   while condition [do]
@@ -119,17 +122,20 @@ title: Ruby tutorial
   end
   </code>
   </pre>
-
+  <p class="writing">
   Note that the "end" statement is required, but the "do" is not! You must separate the conditional statement from the code with either a "do" or a newline and an indent.
-  <br />
-  <br />
+  </p>
+  <p class="writing">
   What if you have just one line of code to run? It seems like a waste to write out the whole structure. Ruby has the answer. You can use "while" as a modifier, using this syntax:
+  </p>
   <pre>
   <code class="ruby">
   code while condition
   </code>
   </pre>
+  <p class="writing">
   If you want a do-while loop (a loop that always executes once, then checks the condition), you can do that too! Be wary, though, it's not called a do-while loop anymore, as it uses the keyword "begin"
+  </p>
   <pre>
   <code class="ruby">
   begin
@@ -137,26 +143,30 @@ title: Ruby tutorial
   end while condition
   </code>
   </pre>
+  <p class="writing">
   Simple! Here is an example of those three loops at work:
+  </p>
   <pre>
   <code class="ruby">
   i = 0
 
   #regular while loop
-  while i < 5
+  while i &lt; 5
     i += 1
   end
 
   #1-line while modifier
-  i += 1 while i < 10
+  i += 1 while i &lt; 10
 
   #begin-while loop 
   begin
     i += 1
-  end while i < 15
+  end while i &lt; 15
   </code>
   </pre>
+  <p class="writing">
   Another feature of Ruby is the "until" loop and modifier. "until" is essentially "while not", but makes more intuitive sense. You can use "until" in any way you could use "while".
+  </p>
   <pre>
   <code class="ruby">
   i = 0
@@ -167,12 +177,10 @@ title: Ruby tutorial
   end
   </code>
   </pre>
-
-  </p>
   <p class="sectionTitle">For Loops/Each Loops</p>
-  <p>
+  <p class="writing">
   For loops are also critical for most languages. Ruby's take on for loops is a bit different from what you're used to, however. The general syntax:
-
+  </p>
   <pre>
   <code class="ruby">
   for var in expression
@@ -180,13 +188,13 @@ title: Ruby tutorial
   end
   </code>
   </pre>
-
+  <p class="writing">
   That may have been a little confusing, especially to those of you who are used to writing for loops in C or Java. Like we've mentioned before, Ruby is very direct and minimalistic, so the condition and modifier have been removed, and it uses one expression to cover the number of times the loop will be executed. This is where the Range object comes in handy. Let's translate from C/Java to Ruby:
-
+  </p>
   <pre>
   <code>
   #For-loop in Java
-  for (i = 0; i < 10; i++) {
+  for (i = 0; i &lt; 10; i++) {
     system.out.println(i);
   }
 
@@ -196,11 +204,12 @@ title: Ruby tutorial
   end
   </code>
   </pre>
-
+  <p class="writing">
   See the difference? Ruby again, is terse and simple. The Ruby loop assigns each value in the range 0..9 to i and runs the loop once for each different value. 
-  <br />
-  <br />
+  </p>
+  <p class="writing">
   Ruby also implements for-each loops, but also in a new way. An example:
+  </p>
   <pre>
   <code class="ruby">
   #Each loop
@@ -209,13 +218,15 @@ title: Ruby tutorial
   end
   </code>
   </pre>
+  <p class="writing">
   Notice the '|' operators surrounding the variable to be changed. This shows it being used with a range, but it can be used with other data types, such as arrays, as you'll see later on.
 
   </p>
 
   <p class="sectionTitle">If/Else Statements</p>
-  <p>
+  <p class="writing">
   If loops are the backbone of efficiency, conditional statements are the backbone of choice and control. "If" statements allow the programmer to control different paths of the code. These statements are, of course, presented in Ruby without frills. Here's the basic syntax:
+  </p>
   <pre>
   <code class="ruby">
   #If statement
@@ -224,13 +235,15 @@ title: Ruby tutorial
   end
   </code>
   </pre>
+  <p class="writing">
   Look familiar? Almost the same as a while loop. "If" statements tend to be very similar to while loops in syntax. Like the [do] with a while loop, the [then] is optional, and can be replaced by a newline and an indent. Of course, you can use the "elsif" and "else" keywords to create more cases and the default case. Like so:
+  </p>
   <pre>
   <code class="ruby">
   #If-elsif-else example
   if i == 0
     puts "i is zero"
-  elsif i < 0
+  elsif i &lt; 0
     puts "i is negative"
   else
     puts "i is positive"
@@ -238,39 +251,42 @@ title: Ruby tutorial
 
   </code>
   </pre>
-
+  <p class="writing">
   Of course, you'll notice that it uses "elsif", instead of "else if". No unnecessary writing allowed. The "elsif" syntax is the same as "if" syntax, and "else" syntax is as simple as can be.
-  <br />
-  <br />
+  </p>
+  <p class="writing">
   Just like while loops, you can use if as a modifier for 1-line statements.
+  </p>
   <pre>
   <code class="ruby">
   #If as a modifier
   puts "i = 0" if i == 0
   </code>
   </pre>
+  <p class="writing">
   However, you should not use "elsif" or "else" when using "if" as a modifier. 
-  <br />
-  <br />
+  </p>
+  <p class="writing">
   Like "until" for while loops, there is a keyword for an "if not" statement, "unless". You can use "unless" the same way you would use an "if" statement. If you really want to, you can use "else" with an "unless" statement, but it is not recommended, since you could replace that with an if-else structure.
+  </p>
   <pre>
   <code class="ruby">
   #unless statement
-  unless i <= 0
+  unless i &lt;= 0
     puts "i is positive"
   end
   </code>
   </pre>
-
+  <p class="writing">
   If-elsif-else structures are vital, so use them well!
   </p>
-
   <p class="sectionTitle">Case Statements</p>
-  <p>
+  <p class="writing">
   If you've coded in C, Java, or many other languages, you're probably familiar with switch-case statements. Ruby has case-when statements, which do all of the same things.
-  <br />
-  <br />
+  </p>
+  <p class="writing">
   Here are the differences with keywords. Case statements start with the "case" keyword, with the variable to be used. The possible values start with a "when". All other values fall under the "else" statement. Here's an example:
+  </p>
   <pre>
   <code class="ruby">
   #case statement
@@ -287,6 +303,7 @@ title: Ruby tutorial
   end
   </code>
   </pre>
+  <p class="writing">
   Now that you've seen it, it makes sense. Remember, no parentheses needed, no braces needed, nothing more than is necessary. 
   </p>
 
