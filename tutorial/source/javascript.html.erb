@@ -1,0 +1,72 @@
+---
+title: JavaScript Tutorial
+---
+<div class="welcome">
+  <h1>JavaScript Tutorial for CSE 3901</h1>
+  <br />
+  <img  class="JSLogo" src ="images/Javascript.png" alt="JavaScipt Logo">
+  <p class="rubyTitle"> Welcome to the JavaScript tutorial for CSE 3901!</p>
+  <p class="sectionTitle">Introduction:</p>
+  <p class="writing"> JavaScript is a programming language that builds off of HTML to add extra functionality to webpages. All that is required is to host or cache a copy of the JavaScript library on a browser or server and the all of its features are at your fingertips.  Some of JavaScript’s biggest strengths are:
+  <UL>
+  	<LI>Cross-Platform</LI>
+  	<LI>Meant to be integrated with HTML</LI>
+  	<LI>Meant to be integrated with Java</LI>
+  	<LI>Lightweight and easy to use</LI>
+  	<LI>Expansive collection of libraries</LI>
+  </UL>
+
+  With all of the above reasons (and more), JavaScript is the go to programming language for programmers who want to make dynamic and interactive webpages that stick out and create a lasting impression!
+   </p>
+  <br />
+  <p class="sectionTitle">Setup and Basic Syntax</p>
+  <p class="writing">Setting up and using JavaScript is incredibly easy. Before you start typing up your JavaScript, you should think about where to place it in your HTML. The most common places are:
+
+  <UL>
+  	<LI>Inside the &lthead&gt* </LI>
+  	<LI>Inside the &ltbody&gt**</LI>
+	<LI>Inside both the &lthead&gt and the &ltbody&gt</LI>
+	<LI>In an external file that is linked into the HTML</LI>
+	<br/>
+	*if a script is included in the &lthead&gt it is executed before the body displays
+	<br/>
+	**if the script is inline, then it's executed as the body is displayed
+  </UL>
+
+  In addition to deciding where to place your JavaScript, there are a few things you should understand about its syntax. First, JavaScript is different than some programming languages in that semi-colons aren’t required, but you should separate your arguments and variables on different lines so they can be interpreted correctly. Next, all of your JavaScript code should be encapsulated using the &ltscript&gt tags. This is how your browser will know what code is HTML and what is JavaScript when it goes to load your webpage.
+
+  <pre><code>&lt!DOCTYPE html&gt
+	&lthtml&gt
+	&ltbody&gt
+
+	&lth1&gtYour Turn!&lt/h1&gt
+	&ltp&gt Edit the function to change what is written to the HTML document: &lt/p&gt
+	&ltscript&gt document.write("your text here!"); &lt/script&gt
+	&lt/body&gt
+	&lt/html&gt
+	</code></pre>
+	<br/>
+	Try it for yourself using the link below!
+	<br/>
+	<a href ="https://jsfiddle.net/ds3pywop/2/"> https://jsfiddle.net/ds3pywop/2/ </a>
+	<br/><br/>
+	You can also register events to accept user input and output information to them. Using this method, you do not need to encapsulate your JavaScript. Note that this method clears the entire HTML in your document above the execution point:
+	<br/>
+	<pre><code>
+		&lt!DOCTYPE html&gt
+		&lthtml&gt
+		&ltbody&gt
+
+		&lth1>Your Turn!&lt/h1&gt
+		&ltp&gt Edit the event handler to change what is written to the HTML document: &lt/p&gt
+		&ltbutton type=”button” onclick=”document.write('Your text here')”>Click me!&lt/button&gt
+		&lt/body&gt
+		&lt/html&gt
+	</code></pre>
+	<br/>
+	Try it for yourself using the link below!
+	<br/>
+	<a href ="https://jsfiddle.net/by13pkve/3/"> https://jsfiddle.net/by13pkve/3/ </a>
+	<br/><br/>
+</p>
+</div><!-- .welcome -->
