@@ -3,8 +3,72 @@ title: TCP's Tutorial for CSS/HTML, Ruby and JavaScript
 ---
 
 <div class="welcome">
-  <img src="images/mainpagelogo.png" alt="TCP's Tutorial for CSE 3901">
-  <p class="doc">
-    <%= link_to "CSE 3901","http://web.cse.ohio-state.edu/~shareef/3901.sp15/" %>
-  </p><!-- .doc -->
+  <img src="images/mainpagelogo.png" style="display:block;margin-left:auto;margin-right:auto;" alt="TCP's Tutorial for CSE 3901">
 </div><!-- .welcome -->
+<table align="center">
+	<tr>
+		<h1 align="center" width="100%">Table of Contents</h1>
+	</tr>
+	<tr>
+		<th width="30%">Ruby</th>
+		<th width="30%">HTML/CSS</th>
+		<th width="30%">Javascript</th>
+	</tr>
+	<tr>
+		<td>
+			<ol>
+				<li><a href='/ruby.html#rubyIntroduction'>Introduction:</a></li>
+				<li><a href='/ruby.html#rubyDataTypesAndVariables'>Data Types and Variables</a></li>
+				<li><a href='/ruby.html#rubyMathAndLogic'> Math and Logical Operators</a></li>
+				<li><a href='/ruby.html#rubyComments'>Comments</a></li>
+				<li><a href='/ruby.html#rubyStrings'>Strings</a></li>
+				<li><a href='/ruby.html#rubyRanges'>Ranges</a></li>
+				<li><a href='/ruby.html#rubyLoops'>Loops/Conditionals</a></li>
+				<li><a href='/ruby.html#rubyWhileLoops'>While Loops</a></li>
+				<li><a href='/ruby.html#rubyForEachLoops'>For Loops/Each Loops</a></li>
+				<li><a href='/ruby.html#rubyIfElse'>If/Else Statements</a></li>
+				<li><a href='/ruby.html#rubyCaseSwitch'>Case Statements</a></li>
+				<li><a href='/ruby.html#rubyFunctions'>Functions</a></li>
+				<li><a href='/ruby.html#rubyClasses'>Classes</a></li>
+			</ol>
+		</td>
+		<td>
+			<ol>
+				<li><a href='/htmlcss.html#HTMLCSSIntro'>Introduction</a></li>
+				<li><a href='/htmlcss.html#tags'>Tags!</a></li>
+				<li><a href='/htmlcss.html#essentialTags'>Let's get some essential tags out of the way</a></li>
+				<li><a href='/htmlcss.html#yourFirstPage'>Making your first page</a></li>
+				<li><a href='/htmlcss.html#additoinalHTMLNotes'>Some additional notes on HTML</a></li>
+				<li><a href='/htmlcss.html#backToCSS'>Back to CSS</a></li>
+				<li><a href='/htmlcss.html#inlineStyling'>Inline Styling</a></li>
+				<li><a href='/htmlcss.html#internalStyleSheet'>Internal Style Sheet</a></li>
+				<li><a href='/htmlcss.html#CSSExample'>Example of Internal Style Sheet</a></li>
+				<li><a href='/htmlcss.html#CSSAttributes'>CSS Attributes</a></li>
+				<li><a href='/htmlcss.html#IDsAndClasses'>IDs and Classes</a></li>
+				<li><a href='/htmlcss.html#ExternalStyleSheets'>External Style Sheets</a></li>
+				<li><a href='/htmlcss.html#HTMLCSSConclusion'>Go forth, and conquor!</a></li>
+			</ol>
+		</td>
+		<td>
+			<ol>
+				<li><a href='/javascript.html#JSIntroduction'>Introduction:</a></li>
+				<li><a href='/javascript.html#JSSetup'>Setup and Basic Syntax</a></li>
+				<li><a href='/javascript.html#JSOutput'>Output</a></li>
+				<li><a href='/javascript.html#JSVariablesAndFunctionsAndFlexibility'> Variables, Functions, and Flexibility</a></li>
+				<li><a href='/javascript.html#JSObjects'>Objects and Their Properites</a></li>
+				<li><a href='/javascript.html#JSEvents'>Events</a></li>
+				<li><a href='/javascript.html#JSConclusion'>The Rest is Up To You!</a></li>
+			</ol>
+		</td>
+	</tr>
+</table>
+
+<!-- code used to make toc
+var titles, i, list;
+titles=document.getElementsByClassName("sectionTitle");
+list="<ol>\n";
+for(i=0;i<titles.length;i++){
+list+="<li><a href='/javascript.html#"+titles[i].id+"'>"+titles[i].innerHTML+"</a></li>\n";
+}
+list+="</ol>"
+-->
