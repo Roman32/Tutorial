@@ -36,3 +36,7 @@ p.writing{
   margin-left: auto;
   display: block;
 }
+
+pre.inline {
+  display: inline;
+}
